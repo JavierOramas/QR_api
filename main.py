@@ -13,7 +13,7 @@ def generate_qr(data):
     qr.make(fit=True)
     img = qr.make_image(fill='black', back_color='white')
     img.save('image/qrcode.png')
-    send_from_directory(directory='./image', filename='qrcode.png', as_attachment=True)
-    return 'ok'
+    return send_from_directory(directory='./image', filename='qrcode.png', as_attachment=True)
+    
 if __name__ == "__main__":
     app.run()
