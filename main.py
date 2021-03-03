@@ -1,6 +1,8 @@
 from flask import Flask, request, send_from_directory
 import qrcode
 import PIL.Image as img
+import gunicorn
+
 app = Flask(__name__)
 @app.route('/')
 def home():
